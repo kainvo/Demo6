@@ -1,0 +1,351 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* font-family: 'Quicksand', sans-serif; */
+
+}
+
+
+/* HEADER */
+.header {
+  background-color: #F8E1DB;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+/* .header_subcontainer {
+  margin: 0 auto;
+} */
+/* 
+cách 1: sử dụng padding container
+
+cách 2: sử dụng width 90% đối với sub-container*/
+.header_nav {
+  display: flex;
+  gap: 50px;
+}
+
+/* INTRO */
+.intro {
+  height: 500px;
+  background-image: url(./img/BG.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 80%;
+}
+
+/* ACTIVITIES */
+.activities {
+  background-color: #FAF4F2;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.activities_header {  
+  display: flex;
+  justify-content: center;
+}
+
+.activities_body {
+  background-color: #FAF4F2;
+  padding-top: 60px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.activities_img {
+  display: flex;
+  justify-content: center;
+}
+/* THẺ ITEM */
+.activities_body {
+  display: flex;
+  gap: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  justify-content: center;
+
+}
+.item {
+  padding: 30px;
+  background-color: white;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+
+  && .item_img {
+    height: 120px;
+    /* phải có height, nếu không sẽ không hiển thị được hình ảnh */
+    background-image: url(./img/product1.png); 
+    border-radius: 10px;
+    width: 200px;
+    background-size: cover;
+    position: relative;
+  }
+  && p {
+    text-align: center;
+  }
+  && button {
+    background-color: #E8E8E8;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 20px;
+    margin-top: 10px;
+  }  
+}
+.item:nth-child(2) .item_img {
+  background-image: url(./img/product4.png);
+}
+.item:nth-child(3) .item_img {
+  background-image: url(./img/product5.png);
+}
+.item:nth-child(4) .item_img {
+  background-image: url(./img/product1.png);
+}
+
+.item_icon {
+  width: 35px;
+  height: 35px;
+  color: #e06039;
+  /* padding: 10px; */
+  background-color: #F8E1DB;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  opacity: 70%;
+}
+
+.activities__footer {
+  display: flex;
+  justify-content: center;
+}
+.activities__footer button {
+  border: 1px solid #e06039;
+  padding: 10px 40px;
+  border-radius: 20px;
+  color: #e06039;
+}
+
+.contact {
+  height: 400px;
+  background-image: url('./img/mask.png');
+  background-repeat: no-repeat;
+  background-position: bottom 0px left -430px;
+  background-size: cover;
+  background-color: #F8E1DB;
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact__left, .contact__right {
+  width: 45%;
+}
+.contact__right .right__title,
+.right__desc, .social {
+  color: #8D8D8D;
+}
+
+.contact__right {
+  margin-top: 50px;
+}
+.right__desc {
+  margin-top: 10px;
+}
+
+.social {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+.social__left img {
+  height: 30px;
+  margin-top: 10px;
+  display: flex;
+}
+
+.social__right-icon {
+  display: flex;
+  color: #e06039;
+  margin-top: 10px;
+  gap: 10px;
+}
+
+/* FOOTER */
+
+.footer__body {
+  margin-top: 80px;
+  height: 250px;
+  border-radius: 50px 50px 0px 0px;
+  background-color:#F8E1DB;
+  display: flex;
+  padding: 40px;
+  gap: 20px;
+}
+
+.footer h4 {
+  padding-bottom: 20px;
+}
+
+.footer__left {
+  width: 40%; 
+}
+.footer__right {
+  width: 60%; 
+  display: flex;
+  justify-content: space-evenly;
+  
+  && li {
+    list-style: none;
+    margin-bottom: 10px;
+  }
+}
+.footer__bottom {
+  background-color: #F8E1DB;
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .activities_body {
+    flex-wrap: wrap;
+  }
+  .activities_body .item {
+    flex-basis: 45%;
+  }
+
+  .contact {
+    flex-wrap: wrap;
+    margin-bottom: 250px;
+    justify-content: center;
+  }
+
+  .contact_left, .contact__right {
+    /* width: 100%; */
+    flex-basis: 60%;
+    text-align: center;
+  }
+
+  .social {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+ .footer__body {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    height: fit-content;
+  }
+
+  .footer, .footer__body, .footer__left, .footer__right {
+    flex-basis: 80%;
+  }
+  .footer__right {
+    justify-content: space-between;
+  }
+
+
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .header_nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .activities_body {
+    flex-wrap: wrap;
+    justify-content: center;
+    
+  }
+  .activities_body .item {
+    flex-basis: 80%;
+  }
+ 
+  .contact {
+    height: 600px;
+    background-image: url('./img/mask.png');
+    background-repeat: no-repeat;
+    background-position: bottom 0px left -430px;
+    background-size: cover;
+    background-color: #F8E1DB;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .contact__left {
+    width: 100%;
+  }
+  
+  .contact__left img {
+    width: 100%;
+  }
+
+  .contact__right {
+    width: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .contact__right {
+    width: 100%;
+    padding-top: 0px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .footer__body {
+    margin-top: 0px;
+    height: 800px;
+    border-radius: 0px 0px 0px 0px;
+    background-color:#FFE1D9;
+    /* display: flex; */
+    /* padding: 40px; */
+    padding-left: 16px;
+    padding-right: 16px;
+    gap: 20px;
+    flex-wrap: wrap;
+    /* margin-bottom: 10px; */
+  }
+
+  .footer__left {
+    width: 100%;
+  }
+
+  .footer__left h4 {
+    font-size: 20px;
+    && p {
+      font-size: 16px;
+    }
+  }
+
+  .footer__right {
+    flex-direction: column;
+    /* flex-basis: 100%;
+    font-size: 16px;
+    font-weight: 300;
+    flex-wrap: wrap ; */
+    gap: 30px;
+  }
+
+  /* .footer__right .footer__right-item {
+    width: 100%;
+  } */
+
+  .footer__right .footer__right-item h4 {
+    font-size: 20px;
+  }
+
+  .footer__bottom {
+    padding-top: 20px;
+    background-color:#FFE1D9;
+  }
+}
